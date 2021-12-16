@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<title>Conf Bs As</title>
+
+<style>
+  body, html{
+    height: 100%
+  }
+
+  .fondo {
+    background-image: url('imagenes/ba1.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+</style>
+
+</head>
+
+    <header>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark container-fluid w-100 ">
+
+          <a class="navbar-brand ms-5" href="index.html" target="_self">
+            <img src="imagenes/codoacodo.png" height="100">Conf Bs As
+          </a>
+
+          <div class="collapse navbar-collapse me-5 justify-content-end align-content-end">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">La conferencia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Los oradores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">El lugar y la fecha</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Conviértete en orador</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-success" href="#">Comprar tickets</a>
+              </li>
+            </ul>
+          </div>
+      </nav>     
+    </header>
+
+    <body>
+      <div class="row">
+        <div class="my-3 container-fluid card-group col-sm-7" style="width:50%">
+          <div class="card border-primary">
+            <div class="card-body text-center">
+              
+              <h5 class="card-title my-3">Estudiante</h5>
+
+              <p class="card-text my-3">Tienen un descuento</p>
+              <h5 class="card-text my-3">80%</h5>
+              <p class="card-text text-secondary">* presentar documentación</p>
+            </div>
+          </div>
+        
+          <div class="card border-secondary">
+            <div class="card-body text-center">
+            
+              <h5 class="card-title my-3">Trainee</h5>
+
+              <p class="card-text my-3">Tienen un descuento</p>
+              <h5 class="card-text my-3">50%</h5>
+              <p class="card-text text-secondary">* presentar documentación</p>
+            </div>
+          </div>
+        
+          <div class="card border-warning">
+            <div class="card-body text-center">
+                
+              <h5 class="card-title my-3">Junior</h5>
+
+              <p class="card-text my-3">Tienen un descuento</p>
+              <h5 class="card-text my-3">15%</h5>
+              <p class="card-text text-secondary">* presentar documentación</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-uppercase">venta</p>
+      <h1 class="text-center text-uppercase">valor de ticket $200</h1>
+
+      <form style="width:50%" class="my-3 container-fluid">
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control mt-1" id="nom" placeholder="Nombre">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control mt-1" id="ape" placeholder="Apellido">
+            </div>
+          </div>
+          <input type="email" class="form-control mt-3" id="cor" placeholder="Correo">
+        <div class="row">
+          <div class="col">
+            <label class="my-3">Cantidad</label>
+            <input type="text" class="form-control mt-1" placeholder="Cantidad" id="cant">
+          </div>
+          <div class="col">
+            <label class="my-3">Categoría</label>
+            <select class="form-select" id="category">
+              <option value="0">Estudiante</option>
+              <option value="1">Trainee</option>
+              <option value="2">Junior</option>
+            </select>
+          </div>
+          </div>
+          <div class="badge my-3 container-fluid bg-info">
+            <h5 class="ms-3 text-start text-black-50">Total a pagar: $<span class="ms-3 text-start text-black-50" id="precio"></span></h5>
+          </div>
+          <div class="row">
+            <div class="col">
+          <div class="badge container-fluid bg-warning p-0">
+            <button onclick="borrar()" type="button" class="btn btn-warning mt-2 text-white text-center w-100">Borrar</button>
+          </div>
+        </div>  
+        <div class="col">
+          <div class="badge container-fluid bg-warning p-0">
+            <button onclick="resumen()" type="button" class="btn btn-warning mt-2 text-white text-center w-100">Resumen</button>
+          </div>
+        </div>
+        </div>  
+      </form>
+
+    </body>
+
+    <footer class="container-fluid w-100 text-center bg-dark">
+        <div class="row">
+          <div class="col mt-1 align-self-center">
+            <ul class="list-unstyled">          
+              <a href="#" class="text-white"><li>Preguntas</li>
+              <li>Frecuentes</li></a>
+            </ul>
+          </div>
+  
+          <div class="col m-0 align-self-center">
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-white">Contáctanos</a>
+              </li>
+            </ul>
+          </div>
+  
+          <div class="col m-0 align-self-center">
+            <a href="#" class="text-white">Prensa</a>
+          </div>
+  
+          <div class="col m-0 align-self-center">
+            <a href="#" class="text-white">Conferencias</a>
+          </div>
+  
+          <div class="col mt-1 align-self-center">
+            <ul class="list-unstyled">          
+              <a href="#" class="text-white"><li>Términos y</li>
+              <li>condiciones</li></a>
+              </ul>
+          </div>
+   
+          <div class="col m-0 align-self-center">
+            <a href="#" class="text-white">Privacidad</a>
+          </div>
+  
+          <div class="col m-0 align-self-center">
+            <a href="#" class="text-white">Estudiantes</a>
+          </div>
+        </div>
+      </footer>
+  </html>
